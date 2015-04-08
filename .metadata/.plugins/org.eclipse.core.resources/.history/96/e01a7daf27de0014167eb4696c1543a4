@@ -1,0 +1,8 @@
+package com.beluca.proj.business;
+
+public class Poem {
+
+	public String generatePoem(){
+		return null;
+	}
+}

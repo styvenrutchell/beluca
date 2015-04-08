@@ -1,0 +1,7 @@
+package com.beluca.proj.utils;
+
+public class Constants {
+	public static final String NOUN = "NOUN";
+	public static final String PREPOSITION = "PREPOSITION";
+	public static final String PRONOUN = "PRONOUN";
+}

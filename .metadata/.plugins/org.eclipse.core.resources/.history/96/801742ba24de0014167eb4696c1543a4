@@ -1,0 +1,5 @@
+package com.beluca.proj.model;
+
+public class Poem {
+
+}

@@ -23,3 +23,48 @@ Command-line arguments:  -os macosx -ws cocoa -arch x86_64 -product org.eclipse.
 
 !ENTRY org.infinitest.eclipse 1 0 2015-04-08 12:08:56.478
 !MESSAGE poemGen Files changed: [/Users/spalacio1/Documents/Styven/workspace/poemGen/bin/com/beluca/proj/MainPoemGen.class]
+
+!ENTRY org.infinitest.eclipse 1 0 2015-04-08 13:51:22.944
+!MESSAGE poemGen Files changed: [/Users/spalacio1/Documents/Styven/workspace/poemGen/bin/com/beluca/proj/model/Poem.class]
+
+!ENTRY org.infinitest.eclipse 1 0 2015-04-08 13:56:51.860
+!MESSAGE poemGen Files changed: [/Users/spalacio1/Documents/Styven/workspace/poemGen/bin/com/beluca/proj/utils/Constants.class]
+
+!ENTRY org.infinitest.eclipse 1 0 2015-04-08 13:59:00.440
+!MESSAGE Files removed. Reloading poemGen
+
+!ENTRY org.infinitest.eclipse 1 0 2015-04-08 13:59:00.440
+!MESSAGE Reloading core poemGen
+
+!ENTRY org.infinitest.eclipse 1 0 2015-04-08 13:59:00.515
+!MESSAGE poemGen Files changed: [/Users/spalacio1/Documents/Styven/workspace/poemGen/bin/com/beluca/proj/MainPoemGen.class, /Users/spalacio1/Documents/Styven/workspace/poemGen/bin/com/beluca/proj/utils/References.class, /Users/spalacio1/Documents/Styven/workspace/poemGen/bin/com/beluca/proj/model/Poem.class]
+
+!ENTRY org.infinitest.eclipse 1 0 2015-04-08 13:59:27.039
+!MESSAGE poemGen Files changed: [/Users/spalacio1/Documents/Styven/workspace/poemGen/bin/com/beluca/proj/utils/References.class]
+
+!ENTRY org.infinitest.eclipse 1 0 2015-04-08 13:59:36.478
+!MESSAGE poemGen Files changed: [/Users/spalacio1/Documents/Styven/workspace/poemGen/bin/com/beluca/proj/utils/Keywords.class]
+
+!ENTRY org.infinitest.eclipse 1 0 2015-04-08 14:00:27.403
+!MESSAGE poemGen Files changed: [/Users/spalacio1/Documents/Styven/workspace/poemGen/bin/com/beluca/proj/utils/Keywords.class]
+
+!ENTRY org.infinitest.eclipse 1 0 2015-04-08 14:04:06.173
+!MESSAGE poemGen Files changed: [/Users/spalacio1/Documents/Styven/workspace/poemGen/bin/com/beluca/proj/utils/References.class]
+
+!ENTRY org.infinitest.eclipse 1 0 2015-04-08 14:11:10.388
+!MESSAGE poemGen Files changed: [/Users/spalacio1/Documents/Styven/workspace/poemGen/bin/com/beluca/proj/utils/References.class]
+
+!ENTRY org.infinitest.eclipse 1 0 2015-04-08 14:23:25.662
+!MESSAGE Files removed. Reloading poemGen
+
+!ENTRY org.infinitest.eclipse 1 0 2015-04-08 14:23:25.662
+!MESSAGE Reloading core poemGen
+
+!ENTRY org.infinitest.eclipse 1 0 2015-04-08 14:23:25.664
+!MESSAGE poemGen Files changed: [/Users/spalacio1/Documents/Styven/workspace/poemGen/bin/com/beluca/proj/MainPoemGen.class, /Users/spalacio1/Documents/Styven/workspace/poemGen/bin/com/beluca/proj/utils/References.class, /Users/spalacio1/Documents/Styven/workspace/poemGen/bin/com/beluca/proj/utils/Keywords.class, /Users/spalacio1/Documents/Styven/workspace/poemGen/bin/com/beluca/proj/business/Poem.class]
+
+!ENTRY org.infinitest.eclipse 1 0 2015-04-08 14:26:31.709
+!MESSAGE poemGen Files changed: [/Users/spalacio1/Documents/Styven/workspace/poemGen/bin/com/beluca/proj/MainPoemGen.class, /Users/spalacio1/Documents/Styven/workspace/poemGen/bin/com/beluca/proj/business/Poem.class]
+
+!ENTRY org.infinitest.eclipse 1 0 2015-04-08 14:44:35.918
+!MESSAGE poemGen Files changed: [/Users/spalacio1/Documents/Styven/workspace/poemGen/bin/com/beluca/proj/business/Poem.class]
