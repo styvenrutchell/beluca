@@ -1,0 +1,92 @@
+package com.beluca.proj.business;
+
+import java.io.BufferedReader;
+import java.io.DataInputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.Random;
+
+import com.beluca.proj.utils.References;
+
+public class Poem {
+	private final String LINE_PATH = "src/main/resources/LINE.txt";
+	private final String NOUN_PATH = "src/main/resources/NOUN.txt";
+	private final String POEM_PATH = "src/main/resources/POEM.txt";
+	private final String PREPOSITION_PATH = "src/main/resources/PREPOSITION.txt";
+	private final String PRONOUN_PATH = "src/main/resources/PRONOUN.txt";
+	private final String VERB_PATH = "src/main/resources/VERB.txt";
+	private final String ADJECTIVE_PATH = "src/main/resources/ADJECTIVE.txt";
+	
+
+	public String generatePoem(){
+		StringBuilder poem = new StringBuilder();
+		int linesCount = 0;
+		try {
+			linesCount = getLines();
+		
+		for(int i = 1 ; i<=linesCount; i++){
+			poem.append(generateLine());
+		}
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		//return poem.toString();
+		return "number of lines: "+linesCount;
+	}	
+
+	private String generateLine() throws IOException {
+		String[] randomOnes = null;
+		String[] splittedBySpace = null;
+		String fullText = getFullTextFromFile(LINE_PATH);
+
+		splittedBySpace = fullText.split(" ");
+		
+		if(splittedBySpace != null){
+			randomOnes = splittedBySpace[0].split("\\|");
+		}else{
+			randomOnes = fullText.split("\\|");
+		}
+		int randomNumber = generateRandomNumber(randomOnes.length);
+		
+		return null;
+	}
+
+	
+	private int generateRandomNumber(int length) {
+		Random rmd = new Random();
+		int randomNumber = rmd.nextInt(length-1);
+		return randomNumber;
+	}
+
+	private int getLines() throws IOException {
+		String[] lines = null;
+		String fullText = getFullTextFromFile(POEM_PATH);
+		int linesCount = 0;
+
+		lines = fullText.split(" ");
+		if(lines != null){
+			for(String currentReference : lines){
+				if(currentReference.equals(References.LINE)){
+					linesCount++;
+				}
+			}
+		}
+		
+		return linesCount;
+	}
+
+	private String getFullTextFromFile(String path) throws IOException {
+		FileInputStream inputStream = new FileInputStream(path);
+		DataInputStream dInput = new DataInputStream(inputStream);
+		BufferedReader buffer = new  BufferedReader( new InputStreamReader(dInput));
+		StringBuilder fullText = new StringBuilder();
+		String line;
+		while((line =buffer.readLine())!= null){
+			fullText.append(line);
+		}
+		return fullText.toString();
+	}
+}

@@ -6,4 +6,5 @@ public class References {
 	public static final String PREPOSITION = "<PREPOSITION>";
 	public static final String PRONOUN = "<PRONOUN>";
 	public static final String ADJECTIVE = "<ADJECTIVE>";
+	public static final String VERB = "<VERB>";
 }

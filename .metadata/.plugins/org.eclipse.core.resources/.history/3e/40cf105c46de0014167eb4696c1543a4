@@ -1,0 +1,23 @@
+package com.beluca.proj;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.beluca.proj.business.Poem;
+
+public class MainPoemGen {
+
+	public static void main(String[] args) {
+		Poem poem = new Poem();
+		List<String>listTest = new ArrayList<String>();
+		listTest.add("1");
+		listTest.add("2");
+		listTest.add("3");
+		listTest.add("4");
+		listTest.remove(listTest.size()-1);
+		System.out.println(listTest.toString());
+		//System.out.println(poem.generatePoem());
+
+	}
+
+}

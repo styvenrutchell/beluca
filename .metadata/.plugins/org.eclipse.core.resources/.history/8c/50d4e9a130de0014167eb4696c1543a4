@@ -1,0 +1,91 @@
+package com.beluca.proj.business;
+
+import java.io.BufferedReader;
+import java.io.DataInputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+import com.beluca.proj.utils.References;
+
+public class Poem {
+	private final String LINE_PATH = "src/main/resources/LINE.txt";
+	private final String NOUN_PATH = "src/main/resources/NOUN.txt";
+	private final String POEM_PATH = "src/main/resources/POEM.txt";
+	private final String PREPOSITION_PATH = "src/main/resources/PREPOSITION.txt";
+	private final String PRONOUN_PATH = "src/main/resources/PRONOUN.txt";
+	private final String VERB_PATH = "src/main/resources/VERB.txt";
+	private final String ADJECTIVE_PATH = "src/main/resources/ADJECTIVE.txt";
+	
+
+	public String generatePoem(){
+		StringBuilder poem = new StringBuilder();
+		int linesCount = getLines();
+		for(int i = 1 ; i<=linesCount; i++){
+			poem.append(generateLine());
+		}
+		//return poem.toString();
+		return "number of lines: "+linesCount;
+	}	
+
+	private String generateLine() {
+		String[] randomOnes = null;
+		String[] splittedBySpace = null;
+		
+		try {
+			BufferedReader buffer = getBuffer(LINE_PATH);
+			String line;
+			while((line =buffer.readLine())!= null){
+				if(splittedBySpace!=null){
+					
+				}
+				randomOnes = line.split("|");
+				splittedBySpace = line.split(" ");
+			}
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		return null;
+	}
+
+	
+	private int getLines() {
+		String[] lines = null;
+		int linesCount = 0;
+		try {
+			BufferedReader buffer = getBuffer(POEM_PATH);
+			String line;
+			while((line =buffer.readLine())!= null){
+				lines = line.split(" ");
+			}
+			
+		} catch (FileNotFoundException e) {
+			System.err.println("POEM.txt file was not found: "+ e.getMessage());
+		} catch (IOException e) {
+			System.err.println("Error reading POEM.txt file: "+e.getMessage());
+		}
+		if(lines != null){
+			for(String currentReference : lines){
+				if(currentReference.equals(References.LINE)){
+					linesCount++;
+				}
+			}
+		}
+		
+		return linesCount;
+	}
+
+	private BufferedReader getBuffer(String path) throws FileNotFoundException {
+		FileInputStream inputStream = new FileInputStream(path);
+		DataInputStream dInput = new DataInputStream(inputStream);
+		BufferedReader buffer = new  BufferedReader( new InputStreamReader(dInput));
+		return buffer;
+	}
+}

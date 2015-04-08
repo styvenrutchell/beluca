@@ -1,0 +1,57 @@
+package com.beluca.proj.business;
+
+import java.io.BufferedReader;
+import java.io.DataInputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+import com.beluca.proj.utils.References;
+
+public class Poem {
+	
+
+	public String generatePoem(){
+		StringBuilder poem = new StringBuilder();
+		int linesCount = getLines();
+		for(int i = 1 ; i<=linesCount; i++){
+			poem.append(generateLine());
+		}
+		//return poem.toString();
+		return "number of lines: "+linesCount;
+	}	
+
+	private String generateLine() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	private int getLines() {
+		String[] lines = null;
+		int linesCount = 0;
+		try {
+			FileInputStream inputStream = new FileInputStream("src/main/resources/POEM.txt");
+			DataInputStream dInput = new DataInputStream(inputStream);
+			BufferedReader buffer = new  BufferedReader( new InputStreamReader(dInput));
+			String line;
+			while((line =buffer.readLine())!= null){
+				lines = line.split(" ");
+			}
+			
+		} catch (FileNotFoundException e) {
+			System.err.println("POEM.txt file was not found: "+ e.getMessage());
+		} catch (IOException e) {
+			System.err.println("Error reading POEM.txt file: "+e.getMessage());
+		}
+		if(lines != null){
+			for(String currentReference : lines){
+				if(currentReference.equals(References.LINE)){
+					linesCount++;
+				}
+			}
+		}
+		
+		return linesCount;
+	}
+}

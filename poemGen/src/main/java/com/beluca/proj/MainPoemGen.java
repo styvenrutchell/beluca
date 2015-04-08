@@ -6,6 +6,7 @@ public class MainPoemGen {
 
 	public static void main(String[] args) {
 		Poem poem = new Poem();
+
 		System.out.println(poem.generatePoem());
 
 	}

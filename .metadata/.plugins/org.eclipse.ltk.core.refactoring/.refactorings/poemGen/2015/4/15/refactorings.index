@@ -6,3 +6,8 @@
 1428519539831	Rename type 'Constants'
 1428521005311	Move compilation unit
 1428521010547	Delete element
+1428525128538	Extract method 'getBuffer'
+1428528192456	Rename resource 'LINE'
+1428535784529	Extract method 'appendIfWord'
+1428535957641	Rename method 'getStringFromRule'
+1428536013209	Rename field 'lineString'

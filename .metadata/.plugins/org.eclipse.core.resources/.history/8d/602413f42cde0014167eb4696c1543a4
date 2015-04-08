@@ -1,0 +1,51 @@
+package com.beluca.proj.business;
+
+import java.io.BufferedReader;
+import java.io.DataInputStream;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Poem {
+	
+
+	public String generatePoem(){
+		StringBuilder poem = new StringBuilder();
+		int linesCount = getLines();
+		for(int i = 1 ; i<=linesCount; i++){
+			poem.append(generateLine());
+		}
+		//return poem.toString();
+		return "number of lines: "+linesCount;
+	}	
+
+	private String generateLine() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	private int getLines() {
+		String[] lines = null;
+		try {
+			FileInputStream inputStream = new FileInputStream("../resources/POEM.txt");
+			DataInputStream dInput = new DataInputStream(inputStream);
+			BufferedReader buffer = new  BufferedReader( new InputStreamReader(dInput));
+			String line;
+			while((line =buffer.readLine())!= null){
+				lines = line.split(" ");
+			}
+			
+		} catch (FileNotFoundException e) {
+			System.err.println("POEM.txt file was not found: "+ e.getMessage());
+		} catch (IOException e) {
+			System.err.println("Error reading POEM.txt file: "+e.getMessage());
+		}
+		if(lines != null)
+			return lines.length;
+		
+		return 0;
+	}
+}
