@@ -11,3 +11,6 @@
 1428535784529	Extract method 'appendIfWord'
 1428535957641	Rename method 'getStringFromRule'
 1428536013209	Rename field 'lineString'
+1428537268496	Copy compilation unit
+1428537277364	Delete element
+1428537784788	Delete element

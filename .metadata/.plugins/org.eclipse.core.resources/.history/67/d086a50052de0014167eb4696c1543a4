@@ -1,0 +1,186 @@
+import static org.junit.Assert.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import com.beluca.proj.business.Poem;
+
+
+public class PoemTest {
+	private List<String> nounList;
+	private List<String> pronounList;
+	private List<String> verbList;
+	private List<String> prepositionList;
+	private List<String> adjectiveList;
+	
+	private Poem poem;
+	
+	
+	@Before
+	public void setup(){
+		nounList = new ArrayList<String>();
+		pronounList = new ArrayList<String>();
+		verbList = new ArrayList<String>();
+		prepositionList = new ArrayList<String>();
+		adjectiveList = new ArrayList<String>();
+		poem = new Poem();
+		
+		fillNoun();
+		fillPronoun();
+		fillVerbList();
+		fillPreposition();
+		fillAdjective();
+	}
+	
+	
+	@Test
+	public void testNumberOfLines() {
+		String poemString = poem.generatePoem();
+		String[] poemLines = poemString.split("\n");
+		assertEquals(5, poemLines.length);
+	}
+	
+	@Test
+	public void testPoemEnd() {
+		String poemString = poem.generatePoem();
+		String[] poemLines = poemString.split("\n");
+		for(String line : poemLines){
+			String[] lineParts = line.split(" ");
+			shouldEndWithAdjectiveNounOrVerb(lineParts);
+		}
+	}
+	
+	@Test
+	public void testPoemBeginning() {
+		String poemString = poem.generatePoem();
+		String[] poemLines = poemString.split("\n");
+		for(String line : poemLines){
+			String[] lineParts = line.split(" ");
+			shouldStartWithNounPrepositionOrPronoun(lineParts);
+		}
+	}
+	
+	private void shouldStartWithNounPrepositionOrPronoun(String[] lineParts) {
+		boolean startsProperly = false;
+		if(prepositionList.contains(lineParts[0]))
+			startsProperly = true;
+		
+		if(nounList.contains(lineParts[0]))
+			startsProperly = true;
+		
+		if(pronounList.contains(lineParts[0]))
+			startsProperly = true;
+		
+		assertTrue(startsProperly);
+		
+	}
+
+
+	private void shouldEndWithAdjectiveNounOrVerb(String[] lineParts) {
+		boolean endsProperly = false;
+		if(adjectiveList.contains(lineParts[lineParts.length-1]))
+			endsProperly = true;
+		
+		if(nounList.contains(lineParts[lineParts.length-1]))
+			endsProperly = true;
+		
+		if(verbList.contains(lineParts[lineParts.length-1]))
+			endsProperly = true;
+		System.out.println("Ending in: "+lineParts[lineParts.length-1]);
+		assertTrue(endsProperly);
+	}
+
+
+	private void fillAdjective() {
+		adjectiveList.add("black");
+		adjectiveList.add("white");
+		adjectiveList.add("dark");
+		adjectiveList.add("light");
+		adjectiveList.add("bright");
+		adjectiveList.add("murky");
+		adjectiveList.add("muddy");
+		adjectiveList.add("clear");
+
+	}
+
+	private void fillPreposition() {
+		prepositionList.add("above");
+		prepositionList.add("across");
+		prepositionList.add("against");
+		prepositionList.add("along");
+		prepositionList.add("among");
+		prepositionList.add("around");
+		prepositionList.add("before");
+		prepositionList.add("behind");
+		prepositionList.add("beneath");
+		prepositionList.add("beside");
+		prepositionList.add("between");
+		prepositionList.add("beyond");
+		prepositionList.add("during");
+		prepositionList.add("inside");
+		prepositionList.add("onto");
+		prepositionList.add("outside");
+		prepositionList.add("under");
+		prepositionList.add("underneath");
+		prepositionList.add("upon");
+		prepositionList.add("with");
+		prepositionList.add("without");
+		prepositionList.add("through");
+	
+	}
+
+	private void fillVerbList() {
+		verbList.add("runs");
+		verbList.add("walks");
+		verbList.add("stands");
+		verbList.add("climbs");
+		verbList.add("crawls");
+		verbList.add("flows");
+		verbList.add("flies");
+		verbList.add("transcends");
+		verbList.add("ascends");
+		verbList.add("descends");
+		verbList.add("sinks");
+	}
+
+	private void fillPronoun() {
+		pronounList.add("my");
+		pronounList.add("your");
+		pronounList.add("his");
+		pronounList.add("her");
+		
+	}
+	
+	private void fillNoun() {
+		nounList.add("heart");
+		nounList.add("sun");
+		nounList.add("moon");
+		nounList.add("thunder");
+		nounList.add("fire");
+		nounList.add("time");
+		nounList.add("wind");
+		nounList.add("sea");
+		nounList.add("river");
+		nounList.add("flavor");
+		nounList.add("wave");
+		nounList.add("willow");
+		nounList.add("rain");
+		nounList.add("tree");
+		nounList.add("flower");
+		nounList.add("field");
+		nounList.add("meadow");
+		nounList.add("pasture");
+		nounList.add("harvest");
+		nounList.add("water");
+		nounList.add("father");
+		nounList.add("mother");
+		nounList.add("brother");
+		nounList.add("sister");
+	
+	}
+	
+
+}

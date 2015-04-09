@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="PoemTest" project="poemGen" tests="3" started="3" failures="0" errors="0" ignored="0">
+  <testsuite name="PoemTest" time="0.005">
+    <testcase name="testPoemEnd" classname="PoemTest" time="0.0"/>
+    <testcase name="testPoemBeginning" classname="PoemTest" time="0.0"/>
+    <testcase name="testNumberOfLines" classname="PoemTest" time="0.005"/>
+  </testsuite>
+</testrun>

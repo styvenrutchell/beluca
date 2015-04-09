@@ -48,7 +48,6 @@ public class Poem {
 	}
 	
 	private void appendStringFromRule(String rule) throws IOException{
-		//StringBuilder stringFromRule = new StringBuilder();
 		String[] randomOnes = null;
 		String[] splittedBySpace = null;
 		

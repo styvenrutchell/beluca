@@ -1,0 +1,115 @@
+import static org.junit.Assert.*;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Before;
+import org.junit.Test;
+
+
+public class PoemTest {
+	private List<String> nounList = new ArrayList<String>();
+	private List<String> pronounList = new ArrayList<String>();
+	private List<String> verbList = new ArrayList<String>();
+	private List<String> prepositionList = new ArrayList<String>();
+	private List<String> adjectiveList = new ArrayList<String>();
+	
+	@Before
+	public void setup(){
+		fillNoun();
+		fillPronoun();
+		fillVerbList();
+		fillPreposition();
+		fillAdjective();
+	}
+	
+	
+	@Test
+	public void test() {
+		
+	}
+	
+	
+	private void fillAdjective() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void fillPreposition() {
+		prepositionList.add("above");
+		prepositionList.add("across");
+		prepositionList.add("against");
+		prepositionList.add("along");
+		prepositionList.add("among");
+		prepositionList.add("around");
+		prepositionList.add("before");
+		prepositionList.add("behind");
+		prepositionList.add("beneath");
+		prepositionList.add("beside");
+		prepositionList.add("between");
+		prepositionList.add("beyond");
+		prepositionList.add("during");
+		prepositionList.add("inside");
+		prepositionList.add("onto");
+		prepositionList.add("outside");
+		prepositionList.add("under");
+		prepositionList.add("underneath");
+		prepositionList.add("upon");
+		prepositionList.add("with");
+		prepositionList.add("without");
+		prepositionList.add("through");
+	
+	}
+
+	private void fillVerbList() {
+		verbList.add("runs");
+		verbList.add("walks");
+		verbList.add("stands");
+		verbList.add("climbs");
+		verbList.add("crawls");
+		verbList.add("flows");
+		verbList.add("flies");
+		verbList.add("trascends");
+		verbList.add("ascends");
+		verbList.add("descends");
+		verbList.add("sinks");
+	}
+
+	private void fillPronoun() {
+		pronounList.add("my");
+		pronounList.add("your");
+		pronounList.add("his");
+		pronounList.add("her");
+		
+	}
+	
+	private void fillNoun() {
+		nounList.add("heart");
+		nounList.add("sun");
+		nounList.add("moon");
+		nounList.add("thunder");
+		nounList.add("fire");
+		nounList.add("time");
+		nounList.add("wind");
+		nounList.add("sea");
+		nounList.add("river");
+		nounList.add("flavor");
+		nounList.add("wave");
+		nounList.add("willow");
+		nounList.add("rain");
+		nounList.add("tree");
+		nounList.add("flower");
+		nounList.add("field");
+		nounList.add("meadow");
+		nounList.add("pasture");
+		nounList.add("harvest");
+		nounList.add("water");
+		nounList.add("father");
+		nounList.add("mother");
+		nounList.add("brother");
+		nounList.add("sister");
+	
+	}
+	
+
+}

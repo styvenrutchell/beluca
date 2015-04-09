@@ -1,0 +1,14 @@
+import java.util.ArrayList;
+import java.util.List;
+
+
+
+public class PoemTest {
+	private List<String> nounList = new ArrayList<String>();
+	private List<String> pronounList = new ArrayList<String>();
+	private List<String> verbList = new ArrayList<String>();
+	private List<String> prepositionList = new ArrayList<String>();
+	private List<String> adjectiveList = new ArrayList<String>();
+	
+	
+}
