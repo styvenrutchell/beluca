@@ -37,7 +37,6 @@ public class Poem {
 			generateLine();	
 		}
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return poem.toString();
@@ -65,17 +64,6 @@ public class Poem {
 		String reference = randomOnes[randomNumber];
 		appendLineFromReference(reference);
 
-	}
-	
-	private String getSplittedRule(String rule) {
-		String[] randomOnes = null;
-	
-		randomOnes = rule.split("\\|");
-	
-		int randomNumber = generateRandomNumber(randomOnes.length);
-
-		String reference = randomOnes[randomNumber];
-		return reference;
 	}
 
 	private void appendLineFromReference(String reference) throws IOException {
@@ -113,6 +101,17 @@ public class Poem {
 		splitted.remove(splitted.size()-1);
 		String splittedRule = getSplittedRule(splittedAux);
 		appendLineFromReference(splittedRule);
+	}
+	
+	private String getSplittedRule(String rule) {
+		String[] randomOnes = null;
+	
+		randomOnes = rule.split("\\|");
+	
+		int randomNumber = generateRandomNumber(randomOnes.length);
+
+		String reference = randomOnes[randomNumber];
+		return reference;
 	}
 
 	private int generateRandomNumber(int length) {

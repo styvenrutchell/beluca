@@ -44,7 +44,7 @@ public class PoemTest {
 	}
 	
 	@Test
-	public void testPoemEnd() {
+	public void testPoemLastWord() {
 		String poemString = poem.generatePoem();
 		String[] poemLines = poemString.split("\n");
 		for(String line : poemLines){
@@ -54,7 +54,7 @@ public class PoemTest {
 	}
 	
 	@Test
-	public void testPoemBeginning() {
+	public void testPoemFirstWord() {
 		String poemString = poem.generatePoem();
 		String[] poemLines = poemString.split("\n");
 		for(String line : poemLines){
